@@ -33,10 +33,9 @@ input_data = pd.DataFrame({
     "alcohol": [alcohol],
     "quality": [quality]
 })
-
 if st.button("predict"):
     prediction = model.predict(input_data)[0]
-    if prdictiion == "white":
+    if prediction == "white":
         st.success("white wine")
     else:
         st.error("red wine")
